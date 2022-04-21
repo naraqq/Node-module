@@ -1,6 +1,6 @@
 let http = require("http");
 let host = "127.0.01";
-let port = 3000;
+let port = 3001;
 let file = require("fs");
 let fileimg = require("fs");
 let queryString = require("querystring");
@@ -32,7 +32,7 @@ let server = http
                 res.write(file.readFileSync(`ex03.html`));
                 res.end();
             } else if (value[1] == "png") {
-                res.writeHead(200, "Content-Type: image/pdf");
+                res.writeHead(200, "Content-Type: image/png");
                 res.write(file.readFileSync(`steak.png`));
                 res.end();
             } else if (value[1] == "json") {
