@@ -1,0 +1,18 @@
+{
+  "name": "node-project",
+  "version": "0.0.1",
+  "description": "my first project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "index": "node index.js"
+  },
+  "author": "Nara",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "react-scripts": "^5.0.1"
+  }
+}
