@@ -1,23 +1,19 @@
 {
-  "name": "day-9",
+  "name": "day-10",
   "version": "1.0.0",
   "description": "",
-  "main": "ex1.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "nodemon": "nodemon userServer.js"
+    "nodemon": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "express": "^4.18.0",
-    "request": "^2.88.2"
-  },
   "dependencies": {
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",
-    "dotenv": "^16.0.0",
-    "nodemon": "^2.0.15"
+    "express": "^4.18.1",
+    "nodemon": "^2.0.16"
   }
 }

@@ -4,6 +4,7 @@ const fs = require("fs");
 const bodyParser = require("body-parser");
 let fsFile = require("fs");
 const fsRead = require("fs");
+const cors = require("cors");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -19,6 +20,25 @@ app.post("/", (req, res) => {
   console.log("file writed successfully!");
   res.send("Got the post request");
 });
+
+require("dotenv").config();
+app.use(express.json());
+app.use(cors());
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.header("Content-Type", "appliction/json");
+  next();
+});
+app.use(
+  express.urlencoded({
+    extended: true,
+  })
+);
+
 app
   .get("/users/:userId/books/:booksId", (req, res) => {
     console.log("server is working!!!");
